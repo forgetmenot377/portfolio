@@ -1,0 +1,60 @@
+// --------- FORMS --------- //
+
+// Icons for form
+.search-icon::after,
+.user-icon::after {
+  width: @btn-xs-size;
+  height: @btn-xs-size;
+}
+
+// Input and select styles
+#search-input,
+#user-options{
+  font-weight: normal;
+  color: @input-text-color;
+  padding: @input-padding;
+  border: @input-border;
+  background-color: @input-bg;
+  box-shadow: @input-inner-shadow, @input-outer-shadow;
+  .border-radius(@input-border-radius);
+  .placeholderColor(@input-text-color);
+
+  & + label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    & + .search-btn{
+      display: none;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-btn {
+  color: @input-text-color;
+  border: @input-border;
+  background-color: @input-bg;
+  position: absolute;
+  padding: 0 1em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  .border-radius(@input-border-radius);
+  box-shadow: @input-inner-shadow;
+}
+
+#search-input:focus {
+  background-color: @input-bg-focus;
+  color: @input-text-focus;
+  .placeholderColor(@input-text-focus);
+  & + label {
+    .search-icon::after{
+      background-position: -360px -29px;
+    }
+    & + .search-btn{
+      display: block;
+    }
+  }
+}

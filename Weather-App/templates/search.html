@@ -1,0 +1,15 @@
+<% for (var i = 0; i < predictions.length; i++) { %>
+<li class="autocomplete__item guess-item">
+  <div class="guess-item__city city-item">
+    <span class="city-item__name">
+      <span class="city-item__letters"><%=predictions[i].terms[0].value.substring(0,predictions[i].matched_substrings[0].length)%></span><%=predictions[i].terms[0].value.substring(predictions[i].matched_substrings[0].length)%>
+    </span>
+    <span class="city-item__desc">//<%=predictions[i].terms[predictions[i].terms.length - 1].value%></span>
+  </div>
+  <label>
+    <input type="checkbox"  class="guess-item__check add-item__check">
+    <input class="place-id" type="hidden" value="<%=predictions[i].place_id%>">
+    <span class="guess-item__mark icon icon-check"></span>
+  </label>
+</li>
+<% } %>

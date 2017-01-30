@@ -1,0 +1,99 @@
+// --------- BUTTONS --------- //
+
+// Menu button
+.menu-btn {
+  float: left;
+  cursor: pointer;
+  width: @btn-m-size;
+  height: @btn-m-size;
+  background-color: @dark-grey;
+  // Menu btn icon styles
+  &::after{
+    width: @btn-m-size;
+    height: @btn-m-size;
+  }
+}
+
+// Options button for each chart
+.options-btn{
+  width: @btn-s-size;
+  height: @btn-xs-size;
+  border: @btn-border;
+  .border-radius(@btn-border-radius);
+  .vertical-gradient(@btn-lightgrey-light, @btn-lightgrey-dark);
+
+  &:hover,
+  &:active,
+  &:focus{
+    .vertical-gradient(@btn-lightgrey-dark, @btn-lightgrey-light);
+  }
+  // Icon size
+  &.icon::after{
+    width: @btn-xs-size;
+    height: @btn-xs-size;
+  }
+}
+
+// Action buttons style
+.action-btn{
+  display: block;
+  cursor: pointer;
+  padding: 4px 9px;
+  border: @btn-border;
+  background-color: @btn-action;
+
+  &:hover, &:focus{
+    background-color: @btn-action-hover;
+    transition: 0.5s background-color;
+  }
+
+  &:active{
+//    .vertical-gradient();
+  }
+  &:first-child{
+    border-bottom: 0;
+  }
+
+  &.icon::after {
+    width: @btn-xs-size;
+    height: @btn-xs-size;
+  }
+}
+.next-btn{
+  cursor: pointer;
+  width: @btn-xs-size;
+  height: @btn-xs-size;
+  &.icon::after {
+    width: @btn-xs-size;
+    height: @btn-xs-size;
+  }
+}
+// Custom button style
+.btn {
+  display: block;
+  border: 0;
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 4px 15px;
+  color: @btn-text-color;
+  text-transform: uppercase;
+  .border-radius(@btn-border-radius);
+
+  .icon{
+    font-size: 4em;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &.active,
+  &:focus{
+    opacity: 1;
+    color: @btn-text-color;
+    transition: 0.5s  opacity;
+    .box-shadow(0, 2px, 2px, 0.4);
+  }
+}
+

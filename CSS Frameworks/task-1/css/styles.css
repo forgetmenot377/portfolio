@@ -1,0 +1,185 @@
+figure,
+ul,
+h1 {
+  margin: 0;
+}
+
+h2,
+h3 {
+  color: #506a85;
+}
+
+p {
+  color: #73879c;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-header {
+  border-bottom: 1px solid #e6e9ed;
+}
+
+.logo,
+.main-nav,
+.menu-item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu-item {
+  margin-right: 30px;
+  text-transform: uppercase;
+  font: bold 0.9375em/3 "Source Sans Pro", sans-serif;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-item a {
+  display: block;
+  padding: 12.5px 0;
+  -webkit-transition: color .2s linear;
+  transition: color .2s linear;
+  color: #506a85;
+}
+
+.menu-item a:hover {
+  color: #00bc9c;
+}
+
+.section-title {
+  margin-bottom: 26px;
+  letter-spacing: .01em;
+  font: 700 2.75em/1.227 "Lato", sans-serif;
+}
+
+.section-paragraph {
+  letter-spacing: .01em;
+  margin: 0;
+  font: 1.375em/1.545 "Source Sans Pro", sans-serif;
+}
+
+.about,
+.main-footer,
+.latest-works {
+  padding: 90px 0 60px;
+}
+
+.traits-list {
+  margin-top: 70px;
+}
+
+.trait-icon {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #00bc9c;
+  font-size: 4em;
+  line-height: 1;
+}
+
+.trait-title {
+  margin-bottom: 20px;
+  letter-spacing: .02em;
+  font: 700 1.625em/1.308 "Lato", sans-serif;
+}
+
+.trait-description {
+  letter-spacing: .01em;
+  font: 1em/1.5625 "Source Sans Pro", sans-serif;
+}
+
+.latest-works {
+  background-color: #f2f5f7;
+}
+
+.last-work-list {
+  margin: 74px auto 63px;
+}
+
+.last-work {
+  margin-bottom: 20px;
+  padding-bottom: 26px;
+  background-color: #fff;
+  box-shadow: inset 0 -1px 0 1px #e6e9ed;
+}
+
+.last-work img {
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.last-work h3 {
+  margin-bottom: 6px;
+  letter-spacing: .02em;
+  color: #506a85;
+  font: 700 1.25em/1.3 "Lato", sans-serif;  }
+
+.last-work p {
+  letter-spacing: .02em;
+  font: 0.875em/1.57 "Source Sans Pro", sans-serif;
+  color: #73879c;
+}
+
+.slide-img {
+  margin-bottom: 20px;
+}
+
+.orbit-bullets {
+  display: block !important;
+  margin-top: 20px;
+}
+
+.orbit-bullets li {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #506a85;
+}
+
+.orbit-bullets li.active {
+  background-color: #00bc9c;
+}
+
+.main-footer {
+  padding: 90px 0 60px;
+}
+
+.button {
+  margin: 38px 0 0;
+  padding: 17.5px 25px;
+  border-radius: 3px;
+  background-color: #00bc9c;
+  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, .15);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  font: 700 0.9375em/1 "Source Sans Pro", sans-serif;
+}
+
+.button:hover {
+  background-color: #17a78b;
+}
+
+@media (max-width: 650px) {
+  .menu-item {
+    display: block;
+    border-bottom: 1px solid #73879c;
+    margin-right: 0;
+    line-height: 2;
+  }
+
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+
+  .main-header {
+    border-bottom-color: #73879c;
+  }
+}

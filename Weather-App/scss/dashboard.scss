@@ -1,0 +1,26 @@
+html { font-size: 62.5%; }
+
+body {
+  background: $body-bg;
+  color: #fff;
+  font-family: $font-f;
+  min-width: 414px;
+}
+
+.main__cities {
+  width: 67.5%;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 26px;
+  right: 28.4%;
+  font-size: 3rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: right 2s ease-out;
+}
+
+.burger-btn--close { right: 5%; }

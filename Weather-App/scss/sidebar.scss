@@ -1,0 +1,199 @@
+.main__sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  width: 33%;
+  transition: right 2s ease-out;
+  background-color: #081322;
+}
+
+.main__sidebar--close { right: -100%; }
+
+.sidebar__form {
+  padding-left: 5%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.form__header {
+  padding: 20px 8% 22px 12%;
+  text-align: right;
+}
+
+.form__input {
+  width: 59%;
+  height: 35px;
+  padding: 0 24px;
+  background-color: rgba(255, 255, 255, 0.749);
+  font-size: 3em;
+  color: #081322;
+  border: none;
+  vertical-align: middle;
+  @include border-radius(17px);
+}
+
+.sidebar__add {
+  margin: 0 13px;
+  font-size: 3rem;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.sidebar__del {
+  font-size: 3rem;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#autocomplete__wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.autocomplete__item {
+  position: relative;
+  padding: 20px 0;
+  border-top: 3px solid $border-c;
+
+  &:last-child {
+    border-bottom: 3px solid $border-c;
+  }
+}
+
+.guess-item__icon {
+  font-size: 5rem;
+  vertical-align: middle;
+  color: #848991;
+}
+
+.guess-item__temp {
+  font-size: 6em;
+  vertical-align: middle;
+  margin: 0 3%;
+}
+
+.guess-item__check {
+  display: none;
+}
+
+.guess-item__check:checked ~ .guess-item__mark:before {
+  visibility: visible;
+}
+
+.guess-item__mark {
+  position: absolute;
+  top: 50%;
+  right: 11%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.3rem;
+  margin: -15px;
+  text-align: center;
+  cursor: pointer;
+  @include border-radius(5px);
+  background-color: #000;
+  color: #ff4200;
+  &::before {
+    visibility: hidden;
+  }
+}
+
+.guess-item__city {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.city-item__name {
+  font-size: 3rem;
+  color: #8f8f8f;
+}
+
+.city-item__letters { color: #fff; }
+
+.city-item__desc {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .502);
+  line-height: 1.5;
+}
+
+.sidebar__config {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  background-color: #152132;
+}
+
+.config__header {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.config__deg {
+  font-size: 4rem;
+  vertical-align: middle;
+  color: #505965;
+  cursor: pointer;
+  transition: all .8s;
+  &.active {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.config__separator {
+  display: inline-block;
+  height: 5.2rem;
+  width: 2px;
+  margin: 0 20px;
+  background-color: $border-c;
+  vertical-align: middle;
+}
+
+.config__icon {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  margin-top: -2rem;
+  font-size: 3rem;
+}
+
+.config__list { font-size: 2.5rem; }
+
+.config__item {
+  padding: 20px 8% 55px 2%;
+  border-top: 3px solid $border-c;
+}
+
+.config__wrap {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.config__value { float: right; }
+
+.config__name {
+  color: #505965;
+  text-transform: uppercase;
+}
+
+.config__slider {
+  position: relative;
+  height: 5px;
+  margin: 0 auto;
+  background-color: #0a1019;
+}

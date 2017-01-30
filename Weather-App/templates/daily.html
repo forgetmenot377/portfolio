@@ -1,0 +1,23 @@
+<li class="week__item week-day">
+  <div class="week-day__wrap">
+    <span class="week-day__day">today</span>
+    <i class="week-day__icon icon icon-<%= context.forecast.daily.data[0].icon %>"></i>
+  </div>
+  <span class="week-day__temp"><span data-unit="<%= Math.round(context.forecast.daily.data[0].temperatureMin) %>"><%= Math.round(context.forecast.daily.data[0].temperatureMin) %></span>°</span>
+
+  <div class="week-day__progress"></div>
+  <span class="week-day__temp"><span data-unit="<%= Math.round(context.forecast.daily.data[0].temperatureMax) %>"><%= Math.round(context.forecast.daily.data[0].temperatureMax) %></span>°</span>
+</li>
+<% for (var j = 1; j < duration; j++) { %>
+<li class="week__item week-day">
+  <div class="week-day__wrap">
+    <span class="week-day__day">
+      <%= dateHelper.getWeekDay(context.forecast.daily.data[j].time, context.forecast.offset) %></span>
+    <i class="week-day__icon icon icon-<%= context.forecast.daily.data[j].icon %>"></i>
+  </div>
+  <span class="week-day__temp"><span data-unit="<%= Math.round(context.forecast.daily.data[j].temperatureMin) %>"><%= Math.round(context.forecast.daily.data[j].temperatureMin) %></span>°</span>
+
+  <div class="week-day__progress"></div>
+  <span class="week-day__temp"><span data-unit="<%= Math.round(context.forecast.daily.data[0].temperatureMax) %>"><%= Math.round(context.forecast.daily.data[j].temperatureMax) %></span>°</span>
+</li>
+<% } %>

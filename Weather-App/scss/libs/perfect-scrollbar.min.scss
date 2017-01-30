@@ -1,0 +1,58 @@
+/* perfect-scrollbar v0.6.8 */
+.ps-container {
+  -ms-touch-action: none;
+  overflow: hidden !important
+}
+
+.ps-container.ps-active-x > .ps-scrollbar-x-rail, .ps-container.ps-active-y > .ps-scrollbar-y-rail {
+  display: block
+}
+
+.ps-container.ps-in-scrolling {
+  pointer-events: none
+}
+
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+  background-color: rgba(0,0,0,.3);
+}
+
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  background-color: #fff;
+}
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+  background-color: #fff;
+}
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #999
+}
+
+.ps-container > .ps-scrollbar-x-rail {
+  display: none;
+  background: rgba(0,0,0,.3);
+  position: absolute;
+  bottom: 3px;
+  height: 8px
+}
+
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  height: 8px
+}
+
+.ps-container > .ps-scrollbar-y-rail {
+  display: none;
+  position: absolute;
+  right: 3px;
+  width: 8px
+}
+
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  width: 8px
+}

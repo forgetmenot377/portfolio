@@ -1,0 +1,152 @@
+.cities__list {
+  list-style: none;
+  transition: all .5s;
+  white-space: nowrap;
+}
+
+.forecast__item {
+  display: inline-block;
+  width: 100%;
+  white-space: normal;
+}
+
+.item-block__today {
+  display: inline-block;
+  width: 46%;
+  padding-left: 1.5%;
+  vertical-align: top;
+}
+
+.today__update {
+  font-size: 3rem;
+  cursor: pointer;
+
+  &:hover {
+    .today__update-btn:before {
+      display: inline-block;
+      transition: all 1s ease-in;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.today__update-btn {
+  vertical-align: baseline;
+  font-size: 2.5rem;
+}
+
+.today__city {
+  font-size: 7.5rem;
+  letter-spacing: 1.5rem;
+  word-break: break-all;
+  text-transform: uppercase;
+}
+
+.today__date {
+  font-size: 4rem;
+  letter-spacing: .8rem;
+  text-transform: uppercase;
+}
+
+.today__now {
+  position: relative;
+  margin: 5rem 2rem;
+  overflow: hidden;
+}
+
+.now__weather {
+  display: inline-block;
+  margin: 0 5%;
+}
+
+.now__moonrise {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.now__weather-icon {
+  font-size: 11rem;
+}
+
+.weather__temp {
+  display: inline-block;
+  font-size: 10rem;
+}
+
+.weather__desc {
+  display: block;
+  font-size: 2rem;
+}
+
+.moonrise__icon {
+  display: inline-block;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.moonrise__time {
+  display: block;
+  margin-top: 10px;
+  font-size: 3rem;
+}
+
+.today__forecast {
+  width: 100%;
+  padding: 4rem 0;
+  position: relative;
+  white-space: nowrap;
+  overflow: auto;
+  border-top: 3px solid $border-c;
+}
+
+.today__features {
+  margin-top: 4rem;
+}
+
+.forecast-day__item {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+}
+
+.feature__direction {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.hour__time {
+  font-size: 2rem;
+}
+
+.hour__icon {
+  display: block;
+  margin: 10px 0;
+  font-size: 4rem;
+}
+
+.hour__temp {
+  font-size: 4rem;
+}
+
+.features__item {
+  position: relative;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+}
+
+.feature__icon {
+  font-size: 4rem;
+}
+
+.feature__text {
+  display: block;
+  margin-top: 10px;
+  font-size: 4rem;
+}

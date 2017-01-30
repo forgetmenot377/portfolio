@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OOP</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form>
+    <div class="block">
+      <label class="input-label" for="input">Input data:</label>
+      <textarea id="input" class="textarea-input" cols="40" rows="20">
+        [
+        {
+        "type": "FixedSalaryEmployee",
+        "salary": 5000,
+        "name": "Ivan",
+        "id": 1
+        },
+        {
+        "type": "HourlySalaryEmployee",
+        "salary": 11,
+        "name": "Vasya",
+        "id": 2
+        },
+        {
+        "type": "FixedSalaryEmployee",
+        "salary": 2700,
+        "name": "Igor",
+        "id": 3
+        }]
+      </textarea>
+    </div>
+    <div class="block">
+      <input id="add-textarea" class="controll-btn" type="button" value="Add from textarea"/><br/>
+      <input id="add-ajax" class="controll-btn" type="button" value="Add by AJAX"/><br/>
+      <input id="show" class="controll-btn" type="button" value="Show collection"/><br/>
+      <input id="show-first" class="controll-btn" type="button" value="Show five first employee names"/><br/>
+      <input id="show-last" class="controll-btn" type="button" value="Show last three employee ids"/><br/>
+    </div>
+    <div class="block">
+      <label class="input-label" for="output">Output data:</label>
+      <textarea id="output" class="textarea-input" cols="40" rows="20" readonly></textarea>
+    </div>
+</form>
+</div>
+<script data-main="js/app" src="js/require.js"></script>
+</body>
+</html>

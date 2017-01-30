@@ -1,0 +1,46 @@
+body {
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  width: 1350px;
+  margin: 0 auto;
+}
+
+.block {
+  display: inline-block;
+  margin: 20px 64px;
+  vertical-align: middle;
+}
+
+.input-label {
+  display: block;
+  font-weight: bold;
+}
+
+
+.controll-btn {
+  width: 260px;
+  height: 30px;
+  margin: 20px 0;
+  background-color: #40c781;
+  border: 0;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 -3px #35a76e inset;
+  transition: 0.2s;
+}
+
+.controll-btn:hover,
+.controll-btn:focus {
+  background-color: #21935a;
+  box-shadow: 0 3px #21935a inset;
+}
+
+.textarea-input {
+  width: 100%;
+  resize: none;
+}

@@ -1,0 +1,43 @@
+.cold--day {
+  background: $cold-day;
+}
+
+.cold--evening {
+  @include background-gradient($cold-day, $night);
+}
+
+.cold--morning {
+  @include background-gradient($night, $cold-day);
+}
+
+.hot--day {
+  background: $hot-day;
+}
+
+.hot--evening {
+  @include background-gradient($hot-day, $night);
+}
+
+.hot--morning {
+  @include background-gradient($night, $hot-day);
+}
+
+.night {
+  background: $night;
+}
+
+
+@keyframes weather{
+  from { background-position: top; }
+  to { background-position: bottom, left; }
+}
+
+.rain {
+  background-image: url("../img/rain.png");
+  animation: weather 1.5s linear infinite;
+}
+
+.snow {
+  background-image: url("../img/snow.png");
+  animation: weather 1.5s linear infinite;
+}

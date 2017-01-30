@@ -1,0 +1,64 @@
+<li class="forecast__item item-block <%= context.forecast.currently.precipType %>">
+  <div class="item-block__today today">
+    <div class="today__wrap">
+      <span class="today__update">
+         <%= dateHelper.getTimeString(context.forecast.currently.time, context.forecast.offset) %>
+        <i class="today__update-btn icon icon-refresh"></i>
+         <span class="connection-status"></span>
+      </span>
+      <h1 class="today__city"><%= context.city.name%></h1>
+      <time class="today__date">
+        <%= dateHelper.getTodayString(context.forecast.currently.time, context.forecast.offset) %>
+      </time>
+      <div class="today__now now">
+        <i class="now__weather-icon  icon-<%= context.forecast.currently.icon %> icon"></i>
+
+        <div class="now__weather weather">
+          <span class="weather__temp">
+            <span data-unit="<%= Math.round(context.forecast.currently.temperature) %>"><%= Math.round(context.forecast.currently.temperature) %></span>°</span>
+          <span class="weather__desc">//<%= context.forecast.currently.summary.toLowerCase() %></span>
+        </div>
+        <div class="now__moonrise moonrise">
+          <i class="moonrise__icon icon-<%= weatherHelper.getMoonPhase(context.forecast.daily.data[0].moonPhase) %> icon"></i>
+          <time class="moonrise__time">
+            <%= dateHelper.getTimeString(context.forecast.daily.data[0].sunriseTime, context.forecast.offset) %>
+          </time>
+        </div>
+      </div>
+    </div>
+    <div class="today__wrap">
+      <ul class="today__forecast  forecast-day ">
+        <% for (var j = 0; j < 24; j++) { %>
+        <li class="forecast-day__item hour">
+          <time class="hour__time">
+            <%= dateHelper.getTimeString(context.forecast.hourly.data[j].time, context.forecast.offset) %>
+          </time>
+          <i class="hour__icon icon icon-<%= context.forecast.hourly.data[j].icon %>"></i>
+          <span class="hour__temp"><span data-unit="<%= Math.round(context.forecast.hourly.data[j].temperature) %>"> <%= Math.round(context.forecast.hourly.data[j].temperature) %></span>°</span>
+        </li>
+        <% } %>
+      </ul>
+      <ul class="today__features features">
+        <li class="features__item feature">
+          <i class="feature__icon icon icon-humidity"></i>
+          <span class="feature__text"><%= Math.round(context.forecast.currently.humidity*100) %>%</span>
+        </li>
+        <li class="features__item feature">
+          <i class="feature__icon icon icon-wind-direction">
+          </i>
+          <span class="feature__direction"><%= weatherHelper.getWindDirection(context.forecast.currently.windBearing) %></span>
+          <span class="feature__text"> <%= Math.round(context.forecast.currently.windSpeed)%> m/c</span>
+        </li>
+        <li class="features__item feature">
+          <i class="feature__icon icon icon-sunrise"></i>
+          <span class="feature__text"><%= dateHelper.getTimeString(context.forecast.daily.data[0].sunriseTime, context.forecast.offset) %></span>
+        </li>
+        <li class="features__item feature">
+          <i class="feature__icon icon icon-sunset"></i>
+          <span class="feature__text"><%= dateHelper.getTimeString(context.forecast.daily.data[0].sunsetTime, context.forecast.offset) %></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ul class="item-block__week week"> </ul>
+</li>

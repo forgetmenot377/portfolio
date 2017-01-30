@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+/* COLORS */
+// -------------------------
+
+.-blue {
+ background: $blue;
+}
+.-dark-blue{
+  background: $dark-blue;
+}
+.-red {
+  background: $red;
+}
+.-grey {
+  background: $dark-grey;
+}
+
+.-light-grey {
+  background: $light-gray;
+}
+.-hovered-blue{
+  &:hover {
+    background: $blue;
+  }
+}

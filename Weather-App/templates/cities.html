@@ -1,0 +1,16 @@
+<li class="autocomplete__item guess-item city-item">
+  <i class="guess-item__icon icon icon-<%= context.forecast.currently.icon %>"></i>
+  <span class="guess-item__temp">
+    <span data-unit="<%= Math.round(context.forecast.currently.temperature) %>"><%= Math.round(context.forecast.currently.temperature) %></span>
+    °</span>
+  <div class="guess-item__city city-item">
+            <span class="city-item__name">
+              <span class="city-item__letters"><%= context.city.name%></span>
+            </span>
+    <span class="city-item__desc">//<%= context.forecast.currently.summary.toLowerCase() %></span>
+  </div>
+  <label class="guess-item__label js-hide">
+    <input type="checkbox"  value="1" class="guess-item__check delete-item__check">
+    <span class="guess-item__mark icon icon-check"></span>
+  </label>
+</li>

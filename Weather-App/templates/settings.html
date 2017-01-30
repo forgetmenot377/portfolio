@@ -1,0 +1,22 @@
+<div class="config__header">
+  <span class="config__celsius config__deg <% if(settings.unit === 'si') { %>  active   <% } %> ">°C</span>
+  <span class="config__separator"></span>
+  <span class="config__fahrenheit config__deg <% if(settings.unit === 'us') { %> active   <% } %>">°F</span>
+  <i class="icon icon-settings config__icon"></i>
+</div>
+<ul class="config__list">
+  <li class="config__item">
+    <div class="config__wrap">
+      <span class="config__name">show weather for</span>
+      <span class="config__value"><span id="config__day-value"><%= settings.daysCount %></span> days</span>
+    </div>
+    <div id="config__day" class="config__slider slider"></div>
+  </li>
+  <li class="config__item">
+    <div class="config__wrap">
+      <span class="config__name">update weather every</span>
+      <span class="config__value"><span id="config__update-value"><%= settings.timeout %></span> min</span>
+    </div>
+    <div id="config__update" class="config__slider slider"></div>
+  </li>
+</ul>

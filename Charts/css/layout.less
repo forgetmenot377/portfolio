@@ -1,0 +1,152 @@
+// --------- LAYOUT --------- //
+
+// Top panel styles
+.top-panel {
+  overflow: hidden;
+  max-height: @top-panel-height;
+  background-color: @top-panel-bg;
+  // Logo style
+  .logo::after {
+    float: left;
+    width: 170px;
+    height: 60px;
+    background-position: -60px 0;
+  }
+}
+
+// Search form
+#search-form {
+  float: right;
+  font-size: 1.6em;
+  padding: 0.8em;
+
+  .input-group {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+// Content
+.content-holder, .charts-holder {
+  height: 100%;
+  position: relative;
+  .content {
+    padding: 1em;
+  }
+  .examples {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  .chart {
+    margin: 1em;
+    padding: @chart-padding;
+    flex: 1 1 auto;
+    background-color: @chart-bg;
+    .border-radius(@chart-radius);
+    .box-shadow(0, 2px, 2px, 0.2);
+    .chart-heading {
+      overflow: auto;
+    }
+    .chart-type {
+      float: left;
+    }
+    .options-btn {
+      float: right;
+    }
+    .highcharts-container {
+      margin: 0 auto;
+    }
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Top bar styles
+.top-bar {
+  overflow: hidden;
+  position: relative;
+  max-height: @top-bar-height;
+  background-color: @top-bar-bg;
+  border-bottom: @top-bar-border;
+  .filter-list {
+    padding: 0.5em;
+    width: 9999px;
+    li {
+      display: inline-block;
+      margin-right: 1em;
+      width: @btn-l-size;
+    }
+    .icon, .icon::after {
+      display: inline-block;
+      width: @btn-m-size;
+      height: @btn-m-size;
+    }
+  }
+  .next-btn {
+    position: absolute;
+    right: 50px;
+    top: 22px;
+    z-index: 1;
+    &:hover{
+      &+.overlay{
+        .horizontal-gradient(rgba(50,0,0,0), rgba(59,59,59,1));
+      }
+    }
+  }
+  .actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: -1px;
+    font-size: 2.4em;
+    .overlay {
+      width: 60px;
+      right: 50px;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+// Side menu styles
+.side-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+  width: @side-menu-width;
+  color: @side-menu-color;
+  transition: 0.5s left;
+  background-color: @side-menu-bg;
+  &.hiddenMenu {
+    left: -@side-menu-width;
+    transition: 0.5s left;
+  }
+  .menu-list {
+    text-align: center;
+    font-size: @side-menu-font-size;
+  }
+  .menu-item {
+    padding: 1em;
+    display: block;
+    &.active, &:active {
+      background-color: @side-menu-active;
+    }
+    &:hover, &:focus {
+      background-color: @side-menu-hover;
+      transition: 0.5s background-color;
+    }
+  }
+  .icon::after {
+    margin: 0 auto;
+    width: @btn-m-size;
+    height: @btn-m-size;
+  }
+}
